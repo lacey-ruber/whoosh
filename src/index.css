@@ -1,0 +1,62 @@
+/* Intro */
+@font-face {
+  font-family: 'Intro';
+  src: url('./assets/fonts/Intro-Regular.ttf'),
+  url('./assets/fonts/Intro-Regular.woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('./assets/fonts/Intro-Light.ttf'),
+  url('./assets/fonts/Intro-Light.woff');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url('./assets/fonts/Intro-Bold.ttf'),
+  url('./assets/fonts/Intro-Bold.woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Intro-Book */
+@font-face {
+  font-family: 'Intro-Book';
+  src: url('./assets/fonts/Intro-Book.ttf'),
+  url('./assets/fonts/Intro-Book.woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Intro-Book';
+  src: url('./assets/fonts/Intro-Book-Italic.ttf'),
+  url('./assets/fonts/Intro-Book-Italic.woff'),
+  url('./assets/fonts/Intro-Book-Italic.eot');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Intro', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

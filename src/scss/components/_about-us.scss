@@ -1,0 +1,32 @@
+.about-us {
+  padding: 76px 0 84px;
+}
+
+.about-us__container {
+  p {
+    font-family: 'Intro-Book';
+    line-height: 24px;
+    margin-top: 24px;
+    img {
+      margin-left: 15px;
+    }
+  }
+}
+
+.etc-icon {
+  cursor: pointer;
+  &:hover {
+    filter: opacity(0.7);
+  }
+}
+
+@media (max-width: 360px) {
+  .about-us {
+    padding: 44px 0 52px;
+    &__container {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

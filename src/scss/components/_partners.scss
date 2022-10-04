@@ -1,0 +1,86 @@
+.partners {
+  padding: 100px 0 50px;
+
+  &__top {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    &-title {
+      font-family: 'Intro';
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      color: $darkBlue;
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      position: absolute;
+      right: 0;
+      font-family: 'Intro-Book';
+      line-height: 24px;
+      color: $darkBlue;
+      border: 1px solid #dde7fd;
+      border-radius: 24px;
+      padding: 8px 16px;
+      img {
+        width: 17px;
+        height: 17px;
+        margin-right: 9px;
+      }
+      &:hover {
+        filter: opacity(0.7);
+      }
+    }
+  }
+
+  &__bottom {
+    &-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      filter: brightness(0) opacity(0.2) drop-shadow(0 0 0 rgb(215, 223, 242));
+
+      &:hover,
+      &.active {
+        filter: opacity(1);
+        transition: $duration;
+      }
+
+      @media (min-width: 150px) {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.swiper-wrapper {
+  // max-height: 50px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .partners {
+    padding: 54px 0 136px;
+    &__top {
+      margin-bottom: 34px;
+      &-title {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+    &__top-btn {
+      bottom: -550%;
+      justify-content: center;
+      width: 100%;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

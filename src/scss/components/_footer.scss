@@ -1,0 +1,306 @@
+.footer {
+  padding: 84px 0 56px;
+  background: #f8faff;
+  position: relative;
+
+  &__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      width: 46%;
+      background: linear-gradient(0deg, #b7c6e7, #b7c6e7), #c2d2f4;
+      opacity: 0.5;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 46%;
+      background: linear-gradient(0deg, #b7c6e7, #b7c6e7), #c2d2f4;
+      opacity: 0.5;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex: 0 1 300px;
+    &-text {
+      display: flex;
+      flex-direction: column;
+    }
+    &-icon {
+      width: 44px;
+      height: 46px;
+      margin: 45px 16px 0 0;
+    }
+
+    &-title {
+      font-family: 'Intro';
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $darkBlue;
+    }
+
+    &-description {
+      margin-top: 32px;
+      font-family: 'Intro-Book';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: $darkBlue;
+      opacity: 0.64;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    &-block {
+      display: flex;
+      flex: 1 1;
+    }
+    &-section {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      &:not(:last-child) {
+        margin-right: 70px;
+      }
+    }
+
+    &-item {
+      line-height: 32px;
+      a {
+        font-family: 'Intro-Book';
+        font-size: 14px;
+        color: $darkBlue;
+        opacity: 0.64;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+
+    &-title {
+      font-family: 'Intro';
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $darkBlue;
+      margin-bottom: 32px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(0deg, #b7c6e7, #b7c6e7), #c2d2f4;
+      }
+    }
+  }
+
+  &__contacts-block {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 232px;
+  }
+  &__contacts-title {
+    font-family: 'Intro';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $darkBlue;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(0deg, #b7c6e7, #b7c6e7), #c2d2f4;
+    }
+  }
+  &__contacts-tel {
+    font-family: 'Intro';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: $darkBlue;
+    margin-top: 32px;
+  }
+
+  &__contacts-address {
+    display: flex;
+    margin-top: 23px;
+    svg {
+      margin: 4px 12px 0 0;
+    }
+    span {
+      font-family: 'Intro-Book';
+      font-size: 14px;
+      line-height: 24px;
+      color: $darkBlue;
+      opacity: 0.64;
+    }
+  }
+
+  &__contacts-networks {
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    a {
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 53px 64px 0 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    &-copyright {
+      font-family: 'Intro-Book';
+      font-size: 14px;
+      line-height: 24px;
+      color: $darkBlue;
+      opacity: 0.64;
+    }
+
+    &-logo {
+      position: absolute;
+      top: 50%;
+      right: 46.5%;
+    }
+
+    &-privacy {
+      display: flex;
+      img {
+        margin-right: 13px;
+      }
+      span {
+        font-family: 'Intro-Book';
+        font-size: 14px;
+        line-height: 24px;
+        color: $darkBlue;
+        opacity: 0.64;
+      }
+    }
+  }
+  &__made-by {
+    font-family: 'Intro';
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #d9e3f6;
+
+    position: absolute;
+    bottom: -4%;
+    right: 47.5%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    padding: 44px 0 112px;
+    &__body {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 105px;
+      align-items: center;
+    }
+    &__main {
+      flex: 0 1;
+      &-title {
+        position: relative;
+        left: -55px;
+      }
+    }
+    &__menu {
+      margin-top: 32px;
+      display: flex;
+      &-section {
+        width: 100%;
+        &:not(:last-child) {
+          margin-right: 28px;
+        }
+      }
+    }
+    &__contacts-block {
+      display: flex;
+      flex: 0 1;
+      margin-top: 42px;
+    }
+    &__contacts-networks {
+      position: static;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 26px;
+    }
+    &__bottom {
+      position: relative;
+      display: flex;
+      padding: 0;
+      flex-direction: column-reverse;
+      &-logo {
+        position: absolute;
+        top: 32px;
+        width: 64px;
+        height: 48px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &-copyright {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &-privacy {
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &__made-by {
+      position: relative;
+      top: 116px;
+      right: 0%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__body {
+      &::before,
+      &::after {
+        width: 40%;
+      }
+    }
+  }
+}

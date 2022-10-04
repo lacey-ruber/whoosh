@@ -1,0 +1,168 @@
+.activity {
+  background: linear-gradient(293deg, #f8faff 34%, #f2f6ff 99.57%);
+  border-top-left-radius: 170px;
+  border-bottom-left-radius: 170px;
+  padding: 74px 0 72px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  &-bg {
+    position: absolute;
+    top: -70px;
+    right: 0;
+  }
+
+  &__title {
+    font-family: 'Intro';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: $darkBlue;
+  }
+
+  &__subtitle {
+    margin-top: 35px;
+    font-family: 'Intro-Book';
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    color: $darkBlue;
+    opacity: 0.48;
+  }
+
+  &__btn {
+    background: #ffdd2d;
+    border-radius: 32px;
+    width: 300px;
+    height: 48px;
+    border: none;
+
+    font-family: 'Intro';
+    font-size: 18px;
+    line-height: 32px;
+    color: $darkBlue;
+    cursor: pointer;
+    &:hover {
+      color: white;
+      transition: $duration;
+    }
+  }
+}
+
+.cards-activity {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  &__item {
+    flex: 0 1 300px;
+    flex-direction: column;
+    margin-bottom: 36px;
+    &-img {
+      display: flex;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: white;
+      margin-top: 17px;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 8px 16px rgba(43, 107, 243, 0.16);
+    }
+    span {
+      display: flex;
+      margin-top: 33px;
+      font-family: 'Intro';
+      font-size: 22px;
+      line-height: 32px;
+      color: $darkBlue;
+    }
+    a {
+      color: $blue;
+      text-decoration: underline;
+      margin-left: 8px;
+      &:hover {
+        opacity: 0.7;
+        text-decoration: none;
+      }
+    }
+    p {
+      margin-top: 20px;
+      font-family: 'Intro-Book';
+      line-height: 24px;
+    }
+    svg {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .activity {
+    &__cards {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .activity {
+    &-bg {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .activity {
+    padding: 54px 0 48px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    &-bg {
+      display: none;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    &__subtitle {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+  .cards-activity {
+    margin-top: 30px;
+    &__item {
+      display: flex;
+      align-items: center;
+      p {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      svg {
+        bottom: 5px;
+        right: 0px;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

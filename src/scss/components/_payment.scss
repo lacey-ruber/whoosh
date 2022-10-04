@@ -1,0 +1,118 @@
+.payment {
+  padding: 100px 0 94px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    width: 47%;
+    background: linear-gradient(0deg, #b7c6e7, #b7c6e7), #c2d2f4;
+    opacity: 0.5;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 47%;
+    background: linear-gradient(0deg, #b7c6e7, #b7c6e7), #c2d2f4;
+    opacity: 0.5;
+  }
+
+  &__title {
+    font-family: 'Intro';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: $darkBlue;
+    margin-bottom: 46px;
+  }
+
+  &-slider__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-slider__slide {
+    flex: 0 1 84px;
+    overflow: hidden;
+    img {
+      border-radius: 8px;
+    }
+  }
+}
+
+.icon-box {
+  z-index: 10;
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 680px) {
+  .swiper {
+    padding: 0 54px;
+  }
+
+  .swiper-button-prev {
+    background-image: url('../../assets/img/icons/arrow.svg');
+    transform: rotate(180deg);
+  }
+  .swiper-button-next {
+    background-image: url('../../assets/img/icons/arrow.svg');
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .swiper-button-prev::after {
+    display: none;
+  }
+  .swiper-button-next::after {
+    display: none;
+  }
+}
+
+@media (min-width: 1px) {
+  .swiper {
+    &-slide {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .swiper-button-prev::after {
+    display: none;
+  }
+  .swiper-button-next::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .payment {
+    padding: 54px 0 62px;
+    &::before,
+    &::after {
+      width: 41%;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    &__slider {
+      margin-top: 34px;
+    }
+  }
+  .payment-slider__arrow {
+    display: none;
+  }
+}

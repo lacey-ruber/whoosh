@@ -4,7 +4,7 @@ import car from '../assets/img/car.png'
 import truck from '../assets/img/truck.png'
 
 const DeliveryForm = () => {
-  const [selectedDelivery, setSelectedDelivery] = useState()
+  const [selectedDelivery, setSelectedDelivery] = useState(1)
   const [data, setData] = useState({
     deliveryType: '',
     startingPoint: '',
